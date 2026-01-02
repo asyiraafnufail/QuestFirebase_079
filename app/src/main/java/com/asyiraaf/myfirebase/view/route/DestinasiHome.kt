@@ -1,7 +1,7 @@
 package com.asyiraaf.myfirebase.view.navigasi
 
 import com.asyiraaf.myfirebase.view.route.DestinasiNavigasi
-import com.example.myfirebase.R
+import com.asyiraaf.myfirebase.R
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"
