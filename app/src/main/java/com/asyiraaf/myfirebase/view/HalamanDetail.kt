@@ -13,7 +13,9 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -93,6 +95,8 @@ private fun BodyDetailDataSiswa(
             dimensionResource(id = R.dimen.padding_medium)
         )
     ){
-
+        var deleteConfirmationRequired by rememberSaveable {
+            mutableStateOf(false)
+        }
     }
 }
