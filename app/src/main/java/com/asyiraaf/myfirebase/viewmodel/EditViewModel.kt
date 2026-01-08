@@ -6,6 +6,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.asyiraaf.myfirebase.modeldata.DetailSiswa
 import com.asyiraaf.myfirebase.modeldata.UIStateSiswa
 import com.asyiraaf.myfirebase.repositori.RepositorySiswa
 import com.asyiraaf.myfirebase.view.navigasi.DestinasiDetail
@@ -28,6 +29,11 @@ class EditViewModel(
                 .toUiStateSiswa(true)
         }
     }
-
-
+    fun updateUiState(detailSiswa: DetailSiswa) {
+        uiStateSiswa =
+            UIStateSiswa(
+                detailSiswa = detailSiswa,
+                isEntryValid = validasiInput(detailSiswa)
+            )
+    }
 }
