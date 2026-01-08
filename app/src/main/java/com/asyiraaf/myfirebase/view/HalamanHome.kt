@@ -62,7 +62,7 @@ fun HomeScreen(
         HomeBody(
             statusUiSiswa = viewModel.statusUiSiswa,
             onSiswaClick = navigateToItemUpdate,
-            retryAction = viewModel::getSiswa,
+            retryAction = viewModel::loadSiswa,
             modifier = modifier
                 .padding(innerPadding)
                 .fillMaxSize()
@@ -87,7 +87,7 @@ fun HomeBody(
             // TODO 1.8 : Tambahkan event onSiswaClick
             is StatusUiSiswa.Success -> DaftarSiswa(
                 itemSiswa = statusUiSiswa.siswa,
-                onSiswaClick = { onSiswaClick(it.id) }
+                onSiswaClick = { onSiswaClick(it.id.toInt()) }
             )
             is StatusUiSiswa.Error -> ErrorScreen(
                 retryAction,
