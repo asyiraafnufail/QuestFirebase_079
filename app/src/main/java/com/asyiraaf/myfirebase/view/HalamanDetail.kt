@@ -1,6 +1,8 @@
 package com.asyiraaf.myfirebase.view
 
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -9,6 +11,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
@@ -18,6 +21,7 @@ import com.asyiraaf.myfirebase.view.navigasi.DestinasiDetail
 import com.asyiraaf.myfirebase.viewmodel.DetailViewModel
 import com.asyiraaf.myfirebase.viewmodel.PenyediaViewModel
 import com.asyiraaf.myfirebase.viewmodel.StatusUIDetail
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -72,4 +76,12 @@ fun DetailSiswaScreen(
                 .verticalScroll(rememberScrollState())
         )
     }
+}
+
+private fun BodyDetailDataSiswa(
+    statusUIDetail: StatusUIDetail,
+    onDelete: () -> Unit,
+    modifier: Modifier = Modifier
+){
+
 }
