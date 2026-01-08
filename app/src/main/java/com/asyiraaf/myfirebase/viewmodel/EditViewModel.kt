@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.asyiraaf.myfirebase.modeldata.DetailSiswa
 import com.asyiraaf.myfirebase.modeldata.UIStateSiswa
+import com.asyiraaf.myfirebase.modeldata.toDataSiswa
+import com.asyiraaf.myfirebase.modeldata.toUiStateSiswa
 import com.asyiraaf.myfirebase.repositori.RepositorySiswa
 import com.asyiraaf.myfirebase.view.navigasi.DestinasiDetail
 import kotlinx.coroutines.launch
