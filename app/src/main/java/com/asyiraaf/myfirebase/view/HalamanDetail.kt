@@ -87,6 +87,7 @@ fun DetailSiswaScreen(
     }
 }
 
+@Composable
 private fun BodyDetailDataSiswa(
     statusUIDetail: StatusUIDetail,
     onDelete: () -> Unit,
@@ -116,6 +117,18 @@ private fun BodyDetailDataSiswa(
             modifier = Modifier.fillMaxWidth()
         ) {
             Text(stringResource(R.string.delete))
+        }
+        if (deleteConfirmationRequired) {
+            DeleteConfirmationDialog(
+                onDeleteConfirm = {
+                    deleteConfirmationRequired = false
+                    onDelete()
+                },
+                onDeleteCancel = { deleteConfirmationRequired = false },
+                modifier = Modifier.padding(
+                    dimensionResource(id = R.dimen.padding_medium)
+                )
+            )
         }
     }
 }
